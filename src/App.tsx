@@ -1,25 +1,18 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, { useState } from "react";
+import "./App.css";
+
+let items = ["Item 1", "Item 2", "Item 3", "Item 4", "Item 5"];
+
+let itemList = items.map((item, index) => {
+  return <li key={index}>{item}</li>;
+});
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <h2>This is a simple list of items</h2>
+      <ul>{itemList}</ul>
+    </>
   );
 }
 
